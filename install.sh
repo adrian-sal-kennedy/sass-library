@@ -3,7 +3,6 @@
 cat << EOF > ./style-to-here
 #!/bin/bash
 ln -s $PWD/style.scss .
-ln -s $PWD/style.css .
 EOF
 chmod +x ./style-to-here
 sudo cp ./style-to-here /usr/local/bin
