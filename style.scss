@@ -10,14 +10,6 @@ $forecolor: #ffc080;
     background-color: #ffffff20;
   }
 }
-.button {
-  @extend .prettybox;
-  &:hover {
-    background-color: #ffffff20;
-  }
-  flex: 0 1 max-content;
-  height: 2em;
-}
 a {
   &:link, &:visited, &:hover, &:active {
     text-decoration: none;
@@ -63,14 +55,13 @@ body {
   display: flex;
   justify-content: left;
   ul {
-    margin-left: -1em;
   }
   li {
     display: inline-flex;
-    margin-left: -0.5em;
-    margin-right: 0.5em;
-    padding: 0 0.6em;
-    height: 2rem;
+    margin-left: -2.6em;
+    margin-right: 2.6em;
+    min-height: max-content;
+    padding: 0.4em 0.6em 0.4em 0.6em;
     align-items: center;
     background-color: #ffffff10;
     border-radius: 0.5em 0 0.5em 0;
@@ -89,22 +80,16 @@ body {
   flex-direction: column;
   min-height: 100vh;
   background-color: #ff804010;
-  .body {
-    display: flex;
-    flex-wrap: wrap;
-    p, h1, h2, h3, h4, h5 {
-      display: flex;
-      flex: 1 1 100%;
-      margin-left: 1em;
-    }
-  }
+  padding-left: 1em;
+  padding-right: 1em;
 }
 .basicbox {
   display: block;
   box-sizing: border-box;
   padding: 0.5em;
   background-color: #ffffff10;
-  margin: 0.5em;
+  // margin: 0.5em;
+  margin-bottom: 0.5em;
 }
 .prettybox {
   @extend .basicbox;
@@ -145,7 +130,7 @@ body {
 table {
   @extend .prettybox;
   flex: 0 1 min-content;
-  margin: 1em auto 0 2em;
+  width: max-content;
   border-spacing: 0;
   padding: 0;
   & thead, tbody {
@@ -187,4 +172,22 @@ table {
   @extend .prettybox;
   width: 10em;
   height: 10em;
+}
+.button {
+  @extend .prettybox;
+  display: inline-block;
+  width: max-content;
+  padding-right: 0.8em;
+}
+a.button {
+  @extend .button;
+  &:hover {
+    border: 1px solid #ffffff30;
+    background-color: #ffffff20;
+  }
+}
+
+.block {
+  flex-direction: column;
+  align-items: flex-start;
 }
