@@ -10,6 +10,14 @@ $forecolor: #ffc080;
     background-color: #ffffff20;
   }
 }
+.button {
+  @extend .prettybox;
+  &:hover {
+    background-color: #ffffff20;
+  }
+  flex: 0 1 max-content;
+  height: 2em;
+}
 a {
   &:link, &:visited, &:hover, &:active {
     text-decoration: none;
@@ -132,6 +140,40 @@ body {
     display: inline-block;
     margin-left: 1em;
     margin-right: 0.5em;
+  }
+}
+table {
+  @extend .prettybox;
+  flex: 0 1 min-content;
+  margin: 1em auto 0 2em;
+  border-spacing: 0;
+  padding: 0;
+  & thead, tbody {
+    display: table-row-group;
+    tr {
+      &:nth-last-child(1) {
+        td, th {
+          padding-bottom: 1em;
+        }
+      }
+      &:nth-child(1) {
+        td, th {
+          padding-top: 1em;
+        }
+      }
+    }
+    td, th {
+      border: 0;
+      padding: 0.2em 1em 0.2em 1em;
+    }
+    td {
+      &:nth-child(odd) {
+        background-color: #00000030;
+      }
+    }
+  }
+  & thead {
+    @extend .prettybox;
   }
 }
 
