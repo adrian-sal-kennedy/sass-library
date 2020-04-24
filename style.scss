@@ -152,13 +152,19 @@ table {
     display: table-row-group;
     tr {
       &:nth-last-child(1) {
-        td, th {
+        td {
           padding-bottom: 1em;
+        }
+        th {
+          padding-bottom: 0.5em;
         }
       }
       &:nth-child(1) {
-        td, th {
+        th {
           padding-top: 1em;
+        }
+        td {
+          padding-top: 0.5em;
         }
       }
     }
